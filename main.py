@@ -8,10 +8,6 @@ import uvicorn
 origins = [
     'http://localhost',
     'http://127.0.0.1',
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-    'http://localhost:5173/',
-    'http://127.0.0.1:5173/'
 ]
 
 app = FastAPI()
@@ -26,7 +22,7 @@ app.add_middleware(
 )
 
 async def start_server():
-    uvicorn.run('main:app', host='127.0.0.1', port=5000, log_level='debug', use_colors=True, reload=True)
+    uvicorn.run('main:app', host='212.67.10.233', port=5000, log_level='debug', use_colors=True, reload=True)
 
 if __name__ == '__main__':
     asyncio.run(start_server())
